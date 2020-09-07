@@ -1,6 +1,5 @@
 ﻿using PetClinic.Domain.Common;
 using PetClinic.Domain.Exceptions;
-using PetClinic.Domain.SharedKernel;
 using System;
 
 namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule
@@ -12,7 +11,6 @@ namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule
             DateTime endDate,
             Doctor doctor,
             Patient patient,
-            Client client,
             ExamRoom examRoom)
         {
             this.Validate(startDate);
@@ -22,7 +20,6 @@ namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule
             this.EndDate = endDate;
             this.Doctor = doctor;
             this.Patient = patient;
-            this.Client = client;
             this.ExamRoom = examRoom;
         }
         public DateTime StartDate { get; private set; }
@@ -32,8 +29,6 @@ namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule
         public Doctor Doctor { get; private set; }
 
         public Patient Patient { get; private set; }
-
-        public Client Client { get; private set; }
 
         public ExamRoom ExamRoom { get; private set; }
 
