@@ -1,6 +1,6 @@
 ﻿using PetClinic.Domain.Common;
 using PetClinic.Domain.Exceptions;
-using static PetClinic.Domain.Constants.RoomsConstants;
+using static PetClinic.Domain.Constants.CommonConstants;
 
 namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule
 {
@@ -16,7 +16,7 @@ namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule
         public int RoomNumber { get; private set; }
 
         private void Validate(int roomNumber)
-           => Guard.AgainstOutOfRange<InvalidRoomException>(
+           => Guard.AgainstOutOfRange<InvalidOperationRoomException>(
                roomNumber,
                MinRoomNumber,
                MaxRoomNumber,
