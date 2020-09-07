@@ -10,16 +10,16 @@ namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule
         {
             this.Validate(roomNumber);
 
-            this.RoomNumber = roomNumber;
+            this.OperationRoomNumber = roomNumber;
         }
 
-        public int RoomNumber { get; private set; }
+        public int OperationRoomNumber { get; private set; }
 
         private void Validate(int roomNumber)
            => Guard.AgainstOutOfRange<InvalidOperationRoomException>(
                roomNumber,
                MinRoomNumber,
                MaxRoomNumber,
-               nameof(this.RoomNumber));
+               nameof(this.OperationRoomNumber));
     }
 }
