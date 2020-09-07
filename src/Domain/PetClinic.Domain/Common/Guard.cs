@@ -1,4 +1,6 @@
 ﻿using PetClinic.Domain.Exceptions;
+using PetClinic.Domain.SharedKernel;
+using System;
 
 namespace PetClinic.Domain.Common
 {
@@ -48,6 +50,42 @@ namespace PetClinic.Domain.Common
             }
 
             ThrowException<TException>($"{name} must be between {min} and {max}.");
+        }
+
+        public static void AgainstInvalidEndDate<TException>(DateTime startDate, DateTime endDate)
+           where TException : BaseDomainException, new()
+        {
+            if (endDate > startDate)
+            {
+                return;
+            }
+
+            ThrowException<TException>($"End date:'{endDate}' must be after start date:'{startDate}'.");
+        }
+
+        public static void AgainstInvalidStartDate<TException>(DateTime startDate)
+          where TException : BaseDomainException, new()
+        {
+            if (startDate >= DateTime.Now)
+            {
+                return;
+            }
+
+            ThrowException<TException>($"Start date:'{startDate}' must be in the future.");
+        }
+
+        public static void AgainstInvalidAge<TException>(Age age)
+          where TException : BaseDomainException, new()
+        {
+            if (age.Years< 0 && age.Years > 20)
+            {
+                ThrowException<TException>($"Years must be in the interval between 0 and 20");
+            }
+
+            if (age.Months < 0 && age.Months > 12)
+            {
+                ThrowException<TException>($"Months must be in the interval between 0 and 12");
+            }
         }
 
         //public static void ForValidUrl<TException>(string url, string name = "Value")
