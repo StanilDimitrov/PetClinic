@@ -37,9 +37,50 @@ namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule
             this.Doctor = doctor;
         }
 
+        public void AssignPatient(Patient patient)
+        {
+            this.Patient = patient;
+        }
+
         public void AssignExamRoom(ExamRoom examRoom)
         {
             this.ExamRoom = examRoom;
+        }
+
+        public void UpdateAppointment(
+            Doctor doctor,
+            ExamRoom examRoom,
+            DateTime? startDate,
+            DateTime? endDate)
+        {
+            SetAppointment(doctor, examRoom, startDate, endDate);
+        }
+
+        private void SetAppointment(
+            Doctor doctor,
+            ExamRoom examRoom,
+            DateTime? startDate,
+            DateTime? endDate)
+        {
+            if (doctor != null)
+            {
+                this.Doctor = doctor;
+            }
+
+            if (examRoom != null)
+            {
+                this.ExamRoom = examRoom;
+            }
+
+            if (startDate.HasValue)
+            {
+                this.StartDate = startDate.Value;
+            }
+
+            if (endDate.HasValue)
+            {
+                this.EndDate = endDate.Value;
+            }
         }
 
         private void Validate(DateTime startDate)
