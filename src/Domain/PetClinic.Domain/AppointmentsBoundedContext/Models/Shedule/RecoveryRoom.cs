@@ -1,25 +1,12 @@
-﻿using PetClinic.Domain.Common;
-using PetClinic.Domain.Exceptions;
-using static PetClinic.Domain.Constants.CommonConstants;
+﻿using PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule.Abstraction;
 
 namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule
 {
-    public class RecoveryRoom : Entity<int>
+    public class RecoveryRoom : BaseRoom
     {
-        internal RecoveryRoom(int roomNumber)
+        internal RecoveryRoom(int roomNumber) :
+           base(roomNumber)
         {
-            this.Validate(roomNumber);
-
-            this.RecoveryRoomNumber = roomNumber;
         }
-
-        public int RecoveryRoomNumber { get; private set; }
-
-        private void Validate(int roomNumber)
-          => Guard.AgainstOutOfRange<InvalidRecoveryRoomException>(
-              roomNumber,
-              MinRoomNumber,
-              MaxRoomNumber,
-              nameof(this.RecoveryRoomNumber));
     }
 }
