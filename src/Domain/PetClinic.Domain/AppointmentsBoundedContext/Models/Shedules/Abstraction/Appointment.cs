@@ -2,7 +2,7 @@
 using PetClinic.Domain.Exceptions;
 using System;
 
-namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule.Abstraction
+namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedules.Abstraction
 {
     public abstract class Appointment : Entity<int>
     {

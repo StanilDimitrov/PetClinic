@@ -1,7 +1,7 @@
-﻿using PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule.Abstraction;
+﻿using PetClinic.Domain.AppointmentsBoundedContext.Models.Shedules.Abstraction;
 using System;
 
-namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule
+namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedules
 {
     public class OfficeVisit : Appointment
     {

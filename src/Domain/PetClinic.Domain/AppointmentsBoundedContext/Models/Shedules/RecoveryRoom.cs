@@ -1,6 +1,6 @@
-﻿using PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule.Abstraction;
+﻿using PetClinic.Domain.AppointmentsBoundedContext.Models.Shedules.Abstraction;
 
-namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule
+namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedules
 {
     public class RecoveryRoom : BaseRoom
     {

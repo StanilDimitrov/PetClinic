@@ -1,5 +1,4 @@
 ﻿using PetClinic.Domain.Exceptions;
-using PetClinic.Domain.SharedKernel;
 using System;
 
 namespace PetClinic.Domain.Common

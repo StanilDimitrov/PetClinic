@@ -1,11 +1,11 @@
-﻿using PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule.Abstraction;
+﻿using PetClinic.Domain.AppointmentsBoundedContext.Models.Shedules.Abstraction;
 using PetClinic.Domain.Common;
 using PetClinic.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedule
+namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedules
 {
     public class Schedule : Entity<int>, IAggregateRoot
     {
