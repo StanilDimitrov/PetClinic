@@ -13,6 +13,13 @@ namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedules
             this.Client = client;
         }
 
+        private Patient()
+        {
+            this.PetType = default!;
+            this.Age = default!;
+            this.Client = default!;
+        }
+
         public Client Client {get; private set;} 
 
         public PetType PetType { get; private set; }

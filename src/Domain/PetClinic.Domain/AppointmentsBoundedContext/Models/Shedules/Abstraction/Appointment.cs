@@ -22,6 +22,18 @@ namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedules.Abstractio
             this.Patient = patient;
             this.BaseRoom = baseRoom;
         }
+
+        private Appointment(
+           DateTime startDate,
+           DateTime endDate)
+        {
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+
+            this.Doctor = default!;
+            this.Patient = default!;
+            this.BaseRoom = default!;
+        }
         public DateTime StartDate { get; protected set; }
 
         public DateTime EndDate { get; protected set; }

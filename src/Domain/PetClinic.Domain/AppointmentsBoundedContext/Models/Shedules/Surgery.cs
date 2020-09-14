@@ -17,6 +17,17 @@ namespace PetClinic.Domain.AppointmentsBoundedContext.Models.Shedules
             this.RecoveryRoom = recoveryRoom;
         }
 
+        private Surgery(
+         DateTime startDate,
+         DateTime endDate,
+         Doctor doctor,
+         Patient patient,
+         BaseRoom operationRoom) :
+          base(startDate, endDate, doctor, patient, operationRoom)
+        {
+            this.RecoveryRoom = default!;
+        }
+
         public RecoveryRoom RecoveryRoom { get; set; }
 
         public override void UpdateAppointment(
