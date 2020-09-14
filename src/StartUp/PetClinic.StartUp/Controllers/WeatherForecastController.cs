@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace PetClinic.Web.Controllers
+namespace PetClinic.StartUp.Controllers
 {
     [ApiController]
     [Route("[controller]")]

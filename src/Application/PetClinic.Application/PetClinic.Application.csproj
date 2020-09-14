@@ -6,10 +6,15 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="9.2.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\PetClinic.Domain\PetClinic.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Appointments\Features\Schedules\Queries\" />
   </ItemGroup>
 
 </Project>

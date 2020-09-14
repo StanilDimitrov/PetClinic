@@ -1,6 +1,6 @@
 using System;
 
-namespace PetClinic.Web
+namespace PetClinic.StartUp
 {
     public class WeatherForecast
     {

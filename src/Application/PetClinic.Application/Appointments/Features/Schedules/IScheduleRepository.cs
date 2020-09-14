@@ -4,7 +4,7 @@ using PetClinic.Domain.AppointmentsBoundedContext.Models.Shedules.Abstraction;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace PetClinic.Application.Appointments
+namespace PetClinic.Application.Appointments.Shedules
 {
     public interface IScheduleRepository : IRepository<Schedule>
     {

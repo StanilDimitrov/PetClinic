@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace PetClinic.Web
+namespace PetClinic.StartUp
 {
     public class Program
     {

@@ -6,7 +6,8 @@ using PetClinic.Domain.SharedKernel;
 
 namespace PetClinic.Domain.AppointmentsBoundedContext.Factories.Schedules
 {
-    public interface IScheduleFactory : IFactory<Schedule>
+    public interface IScheduleFactory
+        : IFactory<Schedule>
     {
         IScheduleFactory WithDoctor(string name);
 
